@@ -20,7 +20,4 @@ Hidden Bites is a discovery platform that helps users find lesser-known local fo
 - **Day 4**: Auth APIs (signup/login)  
 - **Day 5**: Frontend setup with routing  
 - **Day 6**: Connect frontend to backend (auth)  
-- **Day 7**: Add food spot submission feature  
-- **Day 8**: Implement filters and search  
-- **Day 9**: Review & rating system  
-- **Day 10**: Testing, UI polish, final tweaks
+- **Day 7**: Add food spot submission feature.
