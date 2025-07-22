@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const FoodSpot = require("./models/FoodSpot");
+const foodSpotRoutes = require('./routes/foodSpotRoutes');
+app.use('/api', foodSpotRoutes);
+
 
 dotenv.config();
 
