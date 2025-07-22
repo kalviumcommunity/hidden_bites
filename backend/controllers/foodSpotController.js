@@ -21,7 +21,27 @@ const updateFoodSpot = async (req, res) => {
   }
 };
 
+// DELETE /api/foodSpots/:id
+const deleteFoodSpot = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedFoodSpot = await FoodSpot.findByIdAndDelete(id);
+
+    if (!deletedFoodSpot) {
+      return res.status(404).json({ message: 'Food spot not found' });
+    }
+
+    res.status(200).json({ message: 'Food spot deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to delete food spot', error: error.message });
+  }
+};
+
 module.exports = {
-  // other controllers if any
-  updateFoodSpot,
+  createFoodSpot,
+  getAllFoodSpots,
+  getFoodSpotById,
+  updateFoodSpot,     // existing
+  deleteFoodSpot      // newly added
 };
